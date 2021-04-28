@@ -5,7 +5,6 @@ import {
     Route
   } from "react-router-dom";
 import { LoginScreen } from '../login/LoginScreen';
-import { Navbar } from '../ui/Navbar';
 import { DashboardRoutes } from './DashboardRoutes';
 
 export const AppRouter = () => {

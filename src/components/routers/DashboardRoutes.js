@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router'
 import { DcScreen } from '../dc/DcScreen'
-import { LoginScreen } from '../login/LoginScreen'
 import { MarvelScreen } from '../marvel/MarvelScreen'
 import { Navbar } from '../ui/Navbar'
 

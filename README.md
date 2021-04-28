@@ -13,3 +13,6 @@ tiene un router y el otro no
 se agrega al router padre el hijo en un componente Route
 
 4-Agregamos history con replace o push
+
+
+5-Creamos listado de Heroes
