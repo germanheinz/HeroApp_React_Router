@@ -1,9 +1,8 @@
 import React from 'react'
+import { AppRouter } from './components/routers/AppRouter'
 
 export const HeroeApp = () => {
     return (
-        <div>
-            <h1>Heroe App</h1>
-        </div>
+       <AppRouter />
     )
 }
