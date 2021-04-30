@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect, useParams } from 'react-router';
 import { getHeroById } from '../selectors/getHeroById';
 
-export const HeroScreen = () => {
+export const HeroScreen = ({ history }) => {
 
     const { heroId } = useParams();
     console.log( heroId );
@@ -24,6 +24,15 @@ export const HeroScreen = () => {
     } = hero;
     
     console.log( id );
+
+    const handleReturn = () => {
+
+        if(history.length <=2){
+            history.push('/');
+        }else{
+            history.goBack();
+        }
+    }
     
     return (
         <div>
@@ -35,6 +44,7 @@ export const HeroScreen = () => {
                             <img src={`../assets/heroes/${ id }.jpg`} alt="hero" className="card-img"/>
                             <p className="card-text">{ first_appearance }</p>
                     </div>
+                    <button className="btn btn-outline-info" onClick={ handleReturn }>Back</button>
                 </div>
             </li>
         </div>
