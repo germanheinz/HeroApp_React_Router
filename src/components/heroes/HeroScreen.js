@@ -1,12 +1,41 @@
 import React from 'react';
-import { HeroList } from './HeroList';
+import { Redirect, useParams } from 'react-router';
+import { getHeroById } from '../selectors/getHeroById';
 
 export const HeroScreen = () => {
+
+    const { heroId } = useParams();
+    console.log( heroId );
+
+    const hero = getHeroById( heroId );
+    console.log(hero);
+
+    if(!hero){
+        return <Redirect to="/" />
+    }
+    
+    const { 
+        alter_ego,
+        characters,
+        first_appearance,
+        id,
+        publisher,
+        superhero
+    } = hero;
+    
+    console.log( id );
+    
     return (
         <div>
             <li>
-            <HeroList publisher="DC Comics"/>
-
+                <div className="card ms-3" style={{ maxWidth: 200 }}>
+                    <div className="card-body">
+                            <h5 className="card-title">{ superhero }</h5>
+                            <h6 className="card-subtitle mb-2 text-muted">{ alter_ego }</h6>
+                            <img src={`../assets/heroes/${ id }.jpg`} alt="hero" className="card-img"/>
+                            <p className="card-text">{ first_appearance }</p>
+                    </div>
+                </div>
             </li>
         </div>
     )
