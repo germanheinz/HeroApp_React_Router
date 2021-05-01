@@ -1,4 +1,6 @@
 # Getting Started with Create React App
+Route Doc
+https://reactrouter.com/web/guides/quick-start
 
 1-Import router library
 npm install react-router-dom
@@ -16,3 +18,12 @@ se agrega al router padre el hijo en un componente Route
 
 
 5-Creamos listado de Heroes
+
+
+//TEST
+Importar estas librerias 
+https://www.npmjs.com/package/enzyme-to-json
+
+https://enzymejs.github.io/enzyme/
+
+creamos el archivo de test (setupTest.js) y ahora si corremos el test npm run test
