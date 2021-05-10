@@ -27,3 +27,5 @@ https://www.npmjs.com/package/enzyme-to-json
 https://enzymejs.github.io/enzyme/
 
 creamos el archivo de test (setupTest.js) y ahora si corremos el test npm run test
+
+// Creamos el primer test para el reducer
