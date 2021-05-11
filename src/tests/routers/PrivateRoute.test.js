@@ -14,6 +14,8 @@ describe('Pruebas en <PrivateRoute />', () => {
             pathname: '/marvel'
         }
     }
+
+    Storage.prototype.setItem = jest.fn();
     
     test('Debe mostrar el componente si está auntenticado y guardar localStorage', () => {
 
@@ -30,6 +32,7 @@ describe('Pruebas en <PrivateRoute />', () => {
         console.log(wrapper.html());
 
         expect( wrapper.find('span').exists() ).toBe(true);
+        expect( localStorage.setItem).toHaveBeenCalledWith('lastPath', props.location.pathname);
 
         
         
