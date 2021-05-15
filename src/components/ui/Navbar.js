@@ -13,6 +13,8 @@ export const Navbar = () => {
 
     const handleLogOut = () => {
 
+        console.log('Click from Navbar')
+
         history.replace('/login');
 
         dispatch({ 
