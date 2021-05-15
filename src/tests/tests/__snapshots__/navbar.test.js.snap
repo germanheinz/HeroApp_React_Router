@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Testing <Navbar /> debe de mostrarme correctamente el navbar 1`] = `ReactWrapper {}`;
-
-exports[`Testing <Navbar /> debe de mostrarme correctamente el navbar el nombre 1`] = `ReactWrapper {}`;
-
-exports[`Testing <Navbar /> debe de mostrarme correctamente el nombre en el navbar 1`] = `ReactWrapper {}`;
