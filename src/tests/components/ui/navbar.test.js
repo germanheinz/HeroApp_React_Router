@@ -1,10 +1,11 @@
 import { mount } from 'enzyme';
 import Enzyme from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import { Navbar } from '../../components/ui/Navbar';
-import { AuthContext } from '../../components/auth/AuthContext';
 import { MemoryRouter, Router } from 'react-router';
-import { types } from '../../components/types/types';
+
+import { types } from '../../../components/types/types';
+import { AuthContext } from '../../../components/auth/AuthContext';
+import { Navbar } from '../../../components/ui/Navbar';
 import '@testing-library/jest-dom';
 
  
