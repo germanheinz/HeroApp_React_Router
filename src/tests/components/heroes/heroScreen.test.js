@@ -64,6 +64,24 @@ describe('Testing en <HeroScreen />', () => {
 
     })
     
+
+    test('Debe regresar a la pantalla antrerior GOBACK', () => {
+
+        const wrapper = mount(
+            <MemoryRouter initialEntries={['/hero/marvel-spider']}>
+               <Route
+                    path="/hero/:heroId"
+                    component={ () => <HeroScreen history={ history } /> } 
+                />
+            </MemoryRouter>
+        );
+
+        wrapper.find('button').prop('onClick')();
+
+        expect( history.push ).toHaveBeenCalledTimes(0);
+        expect( history.goBack ).toHaveBeenCalled();
+    })
+    
     
 
 })
