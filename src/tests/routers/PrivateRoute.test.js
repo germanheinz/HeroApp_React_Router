@@ -37,5 +37,26 @@ describe('Pruebas en <PrivateRoute />', () => {
         
         
     })
+
+    test('debe bloquear el componente si no está autenticado', () => {
+
+        const wrapper = mount(
+            <MemoryRouter>
+                <PrivateRoute
+                    isAuthenticated={ false }
+                    component={ () => <span>hola</span>}
+                    {...props }
+                />
+            </MemoryRouter>
+
+        );
+
+        expect( wrapper.find('span').exists() ).toBe(false);
+        expect( localStorage.setItem).toHaveBeenCalledWith('lastPath', props.location.pathname);
+
+
+
+    })
+    
     
 })
