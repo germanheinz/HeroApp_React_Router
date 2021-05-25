@@ -35,5 +35,18 @@ describe('Testing <SearchScreen />', () => {
 
 
     })
+
+    test('Debe de mostrar un error si no encuentra al hero', () => {
+        const wrapper = mount(
+            <MemoryRouter initialEntries={['/search?q=batman123']}>
+                <Route path="/search" component={ SearchScreen } />
+            </MemoryRouter>
+        );
+        console.log(wrapper.html());
+        expect(wrapper.find('.alert-danger').text().trim()).toBe('There is no a hero with batman123');
+        
+
+    })
+    
     
 })
